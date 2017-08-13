@@ -37,3 +37,6 @@ moc_para01 10000
 prt_fild08a 10000
 
 # Add your map weights here. Format: <mapname> <weight>
+
+cmd_fild08 10000
+moc_fild16 10000

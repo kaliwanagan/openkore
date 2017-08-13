@@ -3,7 +3,7 @@
 
 ######## Login options and server-specific options ########
 
-master
+master International - iRO: Re:Start
 server
 username
 password
@@ -20,7 +20,7 @@ forceMapIP
 
 # 1 = hook into RO client, 2 = Act as stand-alone proxy, proxy = act as true proxy
 # http://wiki.openkore.com/index.php/XKore
-XKore 0
+XKore
 XKore_port 2350
 XKore_dll NetRedirect.dll
 XKore_autoAttachIfOneExe 1
@@ -63,10 +63,10 @@ attackAuto 2
 attackAuto_party 1
 attackAuto_onlyWhenSafe 0
 attackAuto_followTarget 1
-attackAuto_inLockOnly 1
+attackAuto_inLockOnly 2
 attackAuto_notInTown 1
-attackDistance 1.5
-attackDistanceAuto 0
+attackDistance 1
+attackDistanceAuto 1
 attackMaxDistance 2.5
 attackMaxRouteDistance 100
 attackMaxRouteTime 4
@@ -176,7 +176,7 @@ followRandomDistance 4
 
 itemsTakeAuto 2
 itemsTakeAuto_party 0
-itemsGatherAuto 2
+itemsGatherAuto 0
 itemsMaxWeight 89
 itemsMaxWeight_sellOrStore 48
 itemsMaxNum_sellOrStore 99
@@ -223,7 +223,7 @@ shop_useSkill 1
 
 sitAuto_hp_lower 40
 sitAuto_hp_upper 100
-sitAuto_sp_lower 0
+sitAuto_sp_lower 10
 sitAuto_sp_upper 0
 sitAuto_follow 0
 sitAuto_over_50 0
@@ -271,7 +271,7 @@ teleportAuto_equip_leftAccessory
 teleportAuto_equip_rightAccessory
 teleportAuto_lostHomunculus
 teleportAuto_useItemForRespawn
-teleportAuto_item1
+teleportAuto_item1 Novice Fly Wing
 teleportAuto_item2
 
 dealAuto 1
@@ -299,7 +299,7 @@ wx_map_monsterSticking 1
 wx_map_npcSticking 1
 wx_map_playersSticking 1
 wx_map_portalSticking 5
-wx_map_route
+wx_map_route 1
 wx_npcTalk
 wx_captcha
 showAllDamage 0
@@ -321,11 +321,11 @@ logDead 0
 chatTitleOversize 0
 shopTitleOversize 0
 
-sleepTime 10000
+sleepTime 1000
 
 ignoreAll 0
 itemHistory 0
-autoTalkCont 1
+autoTalkCont 0
 noAutoSkill 0
 portalCompile 1
 portalRecord 2
@@ -658,8 +658,8 @@ equipAuto {
 	manualAI 0
 }
 
-useSelf_item {
-	hp
+useSelf_item Potato {
+	hp < 80
 	sp
 	homunculus_hp
 	homunculus_sp
@@ -678,7 +678,7 @@ useSelf_item {
 	inLockOnly 0
 	notWhileSitting 0
 	notInTown 0
-	timeout
+	timeout 0
 	disabled 0
 	inInventory
 	manualAI 0
@@ -696,17 +696,17 @@ buyAuto {
 	disabled 0
 }
 
-sellAuto 0
-sellAuto_npc
-sellAuto_standpoint
-sellAuto_distance 5
+sellAuto 1
+sellAuto_npc morocc 142 102
+sellAuto_standpoint morocc 154 107
+sellAuto_distance 13
 sellAuto_npc_steps s
 
-storageAuto 0
-storageAuto_npc
-storageAuto_distance 5
+storageAuto 1
+storageAuto_npc morocc 156 97
+storageAuto_distance 12
 storageAuto_npc_type 1
-storageAuto_npc_steps
+storageAuto_npc_steps c r1
 storageAuto_password
 storageEncryptKey
 storageAuto_keepOpen 0
@@ -734,9 +734,10 @@ debugPacket_sent 0
 debugPacket_exclude
 debugPacket_include
 debugPacket_include_dumpMethod
-debugDomains
+debugDomains ai
 logToFile_Debug
 logToFile_Errors
 logToFile_Messages
 logToFile_Warnings
 history_max 50
+macro_orphans terminate
